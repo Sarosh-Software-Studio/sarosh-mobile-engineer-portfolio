@@ -9,6 +9,7 @@
   </p>
 
   <p>
+    <a href="https://mobileengineersarosh.vercel.app/">Portfolio</a> ·
     <a href="mailto:sarosh.mobileengineer@gmail.com">Email</a> ·
     <a href="https://www.linkedin.com/in/sarosh-tahir">LinkedIn</a> ·
     <a href="https://github.com/sarosh4271">GitHub</a> ·
