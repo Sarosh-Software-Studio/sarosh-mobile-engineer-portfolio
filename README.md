@@ -2,7 +2,7 @@
   <img src="assets/muhammad-sarosh.jpg" alt="Muhammad Sarosh" width="150" style="border-radius: 50%;" />
 
   <h1>Muhammad Sarosh</h1>
-  <p><strong>Senior Mobile Engineer · Flutter Specialist · BLE &amp; IoT Expert</strong></p>
+  <p><strong>Mobile Engineer · Flutter Products · Connected Devices</strong></p>
   <p>
     I build production mobile products that connect elegant software with real-world devices,
     services, and people.
@@ -13,7 +13,8 @@
     <a href="mailto:sarosh.mobileengineer@gmail.com">Email</a> ·
     <a href="https://www.linkedin.com/in/sarosh-tahir">LinkedIn</a> ·
     <a href="https://github.com/sarosh4271">GitHub</a> ·
-    <a href="assets/muhammad-sarosh-resume.pdf">Résumé</a>
+    <a href="assets/muhammad-sarosh-product-mobile-resume.pdf">Product Resume</a> ·
+    <a href="assets/muhammad-sarosh-ble-iot-resume.pdf">BLE/IoT Resume</a>
   </p>
 </div>
 
@@ -21,7 +22,7 @@
 
 ## About me
 
-I am a product-focused Senior Mobile Engineer with 5+ years of experience building, scaling, and releasing cross-platform applications. My work spans connected hardware, sports technology, event platforms, student communities, and location-aware consumer products.
+I am a mobile engineer with 5+ years of experience building, scaling, and releasing cross-platform applications. My work spans connected hardware, sports technology, event platforms, student communities, and location-aware consumer products.
 
 My core expertise includes Flutter and Dart, maintainable mobile architecture, BLE/GATT communication, native Android and iOS SDK integration, REST APIs, Firebase, CI/CD, analytics, monetization, and production store delivery.
 
@@ -80,12 +81,14 @@ The website includes:
 
 - Responsive desktop and mobile layouts.
 - Professional experience and technical capabilities.
-- Interactive project screenshot galleries.
+- Separate product and connected-device project paths.
+- Ownership, engineering decisions, and observable outcomes for each project.
+- A sanitized DigiPass/Nedap technical case study.
 - Direct App Store and Google Play links.
 - Technology and tooling showcase.
-- Downloadable résumé.
+- Downloadable product and BLE/IoT résumé variants.
 - Accessible navigation and reduced-motion support.
-- Contact form that composes a prefilled email locally.
+- Direct email, LinkedIn, and résumé actions.
 
 ## Project structure
 
@@ -93,18 +96,19 @@ The website includes:
 .
 ├── index.html              # Portfolio content and page structure
 ├── styles.css              # Responsive design and visual system
-├── script.js               # Navigation, galleries, and contact interactions
+├── script.js               # Navigation, reveal effects, and analytics hooks
+├── case-studies/           # Sanitized technical case studies
 └── assets/
     ├── tools/              # Technology logos
     ├── store/              # App Store and Google Play icons
     ├── *.png, *.jpg        # Project screenshots and profile images
     ├── *.webp              # Optimized project assets
-    └── muhammad-sarosh-resume.pdf
+    └── muhammad-sarosh-*-resume.pdf
 ```
 
 ## Contact
 
-I am open to senior mobile engineering roles, selected freelance projects, and technical conversations involving Flutter, connected devices, BLE, native integrations, or mobile product architecture.
+I am open to mobile engineering roles, selected product work, and technical conversations involving Flutter, connected devices, BLE, native integrations, or mobile product architecture.
 
 - **Email:** [sarosh.mobileengineer@gmail.com](mailto:sarosh.mobileengineer@gmail.com)
 - **LinkedIn:** [linkedin.com/in/sarosh-tahir](https://www.linkedin.com/in/sarosh-tahir)
