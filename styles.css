@@ -151,7 +151,7 @@ button { font: inherit; }
 .tool-cloud > span { min-height: 80px; padding: 11px 8px; display: grid; place-items: center; align-content: center; gap: 8px; color: #34394b; border: 1px solid var(--line); border-radius: 11px; background: #fbfbfd; text-align: center; font-size: 11px; }
 .tool-cloud img { width: 31px; height: 31px; object-fit: contain; }
 .tool-cloud img[src$="github-actions.svg"] { padding: 5px; border-radius: 8px; background: #171a2b; }
-.education-line { margin-top: 30px; padding: 22px 26px; display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: var(--shadow); }
+.education-line { margin-top: 30px; padding: 22px 26px; display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: var(--shadow); scroll-margin-top: 100px; }
 .education-line span { color: var(--purple); font-size: 11px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
 .education-line time { color: var(--muted); font-size: 13px; }
 

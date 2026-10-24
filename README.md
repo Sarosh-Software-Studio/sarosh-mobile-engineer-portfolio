@@ -83,7 +83,7 @@ The website includes:
 - Professional experience and technical capabilities.
 - Separate product and connected-device project paths.
 - Ownership, engineering decisions, and observable outcomes for each project.
-- A sanitized DigiPass/Nedap technical case study.
+- In-depth case studies for Outdey, UniX, BlueDash, and a sanitized DigiPass/Nedap implementation.
 - Direct App Store and Google Play links.
 - Technology and tooling showcase.
 - Downloadable product and BLE/IoT résumé variants.

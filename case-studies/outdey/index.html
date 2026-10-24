@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Outdey case study: one Flutter product connecting event discovery, social planning, ticketing, organizer tools, chat, payments, and QR admission." />
+    <meta property="og:title" content="Outdey — Event Platform Case Study" />
+    <meta property="og:description" content="How Muhammad Sarosh helped deliver a multi-role event platform on iOS and Android." />
+    <meta property="og:image" content="https://mobileengineersarosh.vercel.app/assets/outdey-01.jpg" />
+    <meta property="og:url" content="https://mobileengineersarosh.vercel.app/case-studies/outdey/" />
+    <meta name="theme-color" content="#ff6433" />
+    <title>Outdey — Event Platform Case Study</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="outdey">
+    <header class="wrap nav">
+      <a class="brand" href="../../"><img src="../../assets/outdey-icon.png" alt="" />Outdey</a>
+      <nav class="nav-links" aria-label="Case study navigation">
+        <a href="#challenge">Challenge</a><a href="#architecture">Architecture</a><a href="#reliability">Reliability</a>
+        <a class="nav-cta" href="../../#projects">All projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="wrap hero">
+        <div class="reveal">
+          <div class="eyebrow">Product engineering case study · 2023–2024</div>
+          <h1>One event.<br /><em>Every side.</em></h1>
+          <p class="lede">Outdey brings discovery, friends, tickets, organizers, and door admission into one mobile journey—without making users feel the complexity behind it.</p>
+          <div class="actions">
+            <a class="button primary" href="#challenge">Explore the work</a>
+            <a class="button" href="https://apps.apple.com/us/app/outdey/id6497566952" target="_blank" rel="noreferrer">App Store ↗</a>
+            <a class="button" href="https://play.google.com/store/apps/details?id=com.outdey.outdey" target="_blank" rel="noreferrer">Google Play ↗</a>
+          </div>
+        </div>
+        <div class="hero-art reveal">
+          <span class="float-label one">Discover nearby</span><span class="float-label two">Scan at the door</span>
+          <div class="hero-phone"><img src="../../assets/outdey-01.jpg" alt="Outdey event discovery screen" /></div>
+        </div>
+      </section>
+
+      <dl class="wrap facts reveal" aria-label="Project facts">
+        <div class="fact"><dt>Role</dt><dd>Mobile engineer</dd></div>
+        <div class="fact"><dt>Company</dt><dd>Elite IT Team</dd></div>
+        <div class="fact"><dt>Platforms</dt><dd>iOS + Android</dd></div>
+        <div class="fact"><dt>Stack</dt><dd>Flutter · REST · Firebase</dd></div>
+        <div class="fact"><dt>Hardest constraint</dt><dd>Shared state across user roles</dd></div>
+        <div class="fact"><dt>Result</dt><dd>Shipped to both stores</dd></div>
+      </dl>
+
+      <section class="wrap section" id="challenge">
+        <div class="section-head">
+          <div><div class="section-no">01 / The challenge</div><h2>A single app for a <em>multi-sided</em> event.</h2></div>
+          <div class="section-intro"><p>Event-goers need fast discovery and trustworthy tickets. Organizers need creation, inventory, buyer visibility, and admission tools. Social features add friends, conversations, notifications, and ticket resale. Those paths share the same event and identity state, so a change in one role must remain coherent everywhere else.</p></div>
+        </div>
+        <div class="constraint-grid">
+          <article class="card reveal"><span class="index">01</span><h3>Role-aware journeys</h3><p>The same person may browse as an attendee and manage an event as an organizer. Navigation and actions needed to adapt without fragmenting the product.</p></article>
+          <article class="card reveal"><span class="index">02</span><h3>Transactional state</h3><p>Ticket types, quantities, purchases, resale bids, payments, and admission status all depend on current server state—not optimistic assumptions.</p></article>
+          <article class="card reveal"><span class="index">03</span><h3>Real-world handoff</h3><p>The digital journey ends at a physical venue. QR admission had to turn a purchased ticket into a clear, fast check-in action.</p></article>
+        </div>
+      </section>
+
+      <section class="dark section">
+        <div class="wrap">
+          <div class="section-head">
+            <div><div class="section-no">02 / Engineering decisions</div><h2>Keep the <em>event</em> at the center.</h2></div>
+            <div class="section-intro"><p>I worked across the Flutter delivery and Node.js/MongoDB-backed API surface, connecting product flows around durable IDs and server-owned state instead of duplicating business truth in each screen.</p></div>
+          </div>
+          <div class="decision-grid">
+            <article class="decision featured reveal"><small>Primary decision</small><h3>Model buyer and organizer actions around one event lifecycle.</h3><p>Create, edit, discover, purchase, report, review attendees, and scan admission all reference the same event and ticket resources. This keeps role-specific interfaces aligned with the underlying product state.</p></article>
+            <article class="decision reveal"><small>Live updates</small><h3>Make social state event-driven.</h3><p>Firebase events carried conversation, message, friend-request, notification, event, and ticket-resale changes into the relevant mobile journeys.</p></article>
+            <article class="decision reveal"><small>Product boundary</small><h3>Separate UI state from API ownership.</h3><p>The app presents progress and recovery clearly, while the backend validates ownership, quantities, duplicate reports, authentication, and token renewal.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap architecture" id="architecture">
+        <div class="section-no">03 / Architecture</div>
+        <div class="section-head">
+          <h2>From intent to <em>admission.</em></h2>
+          <p class="architecture-note">Feature controllers coordinate the Flutter experience. REST resources own identity, event, and ticket transactions; Firebase carries live social and notification changes; device services complete maps, payment, media, and QR workflows.</p>
+        </div>
+        <div class="arch-flow reveal" aria-label="Outdey architecture flow">
+          <div class="arch-node"><b>Flutter journeys</b><span>Discovery · organizer · social · tickets</span></div><div class="arrow">→</div>
+          <div class="arch-node accent"><b>Feature state</b><span>Role-aware controllers and UI feedback</span></div><div class="arrow">→</div>
+          <div class="arch-node"><b>Product services</b><span>REST API · Firebase events · media</span></div><div class="arrow">→</div>
+          <div class="arch-node"><b>Real-world action</b><span>Payment · maps · QR admission</span></div>
+        </div>
+      </section>
+
+      <section class="wrap section" id="reliability">
+        <div class="section-head"><div><div class="section-no">04 / Reliability</div><h2>Design for the <em>unhappy path.</em></h2></div><div class="section-intro"><p>In a transactional event app, failure states are part of the core journey. The interface must explain what happened without implying that a ticket, payment, or check-in succeeded when the server has not confirmed it.</p></div></div>
+        <div class="reliability-grid">
+          <article class="card reveal"><span class="index">A</span><h3>Expired access</h3><p>Refresh-token handling restores valid sessions or returns the user to authentication instead of leaving protected screens in an ambiguous state.</p></article>
+          <article class="card reveal"><span class="index">B</span><h3>Inventory conflict</h3><p>Ticket quantity and ownership errors remain server-authoritative, with actionable mobile feedback for unavailable or invalid selections.</p></article>
+          <article class="card reveal"><span class="index">C</span><h3>Event-driven changes</h3><p>Message, friend, notification, event, and resale updates target the affected resource so screens can refresh the right context.</p></article>
+        </div>
+      </section>
+
+      <section class="wrap section" data-gallery>
+        <div class="gallery-head"><div><div class="section-no">05 / Product surface</div><h2>One connected journey.</h2></div><div class="gallery-controls"><button type="button" data-prev aria-label="Previous screenshot">←</button><button type="button" data-next aria-label="Next screenshot">→</button></div></div>
+        <div class="shot-rail">
+          <figure class="shot"><img src="../../assets/outdey-01.jpg" alt="Outdey discovery interface" /></figure>
+          <figure class="shot"><img src="../../assets/outdey-02.jpg" alt="Outdey event details interface" /></figure>
+          <figure class="shot"><img src="../../assets/outdey-03.jpg" alt="Outdey ticket interface" /></figure>
+          <figure class="shot"><img src="../../assets/outdey-04.jpg" alt="Outdey social interface" /></figure>
+          <figure class="shot"><img src="../../assets/outdey-05.jpg" alt="Outdey profile interface" /></figure>
+        </div>
+      </section>
+
+      <section class="dark section">
+        <div class="wrap outcome">
+          <div class="outcome-copy"><div class="section-no">06 / Result + reflection</div><h2>A complete event loop, <em>shipped.</em></h2><p>The delivered product connects browsing, planning, purchasing, organizer operations, and admission on both mobile platforms. The result is observable in the public releases; no invented engagement or revenue figures are used here.</p></div>
+          <div class="outcome-list">
+            <article><span>01</span><div><h3>Delivered</h3><p>Multi-role event discovery, social, ticketing, organizer, chat, notification, payment, and QR workflows.</p></div></article>
+            <article><span>02</span><div><h3>What I would improve next</h3><p>Add idempotency around payment and ticket mutations, offline admission queues with conflict resolution, and contract tests across the mobile/API boundary.</p></div></article>
+            <article><span>03</span><div><h3>Why it matters</h3><p>It demonstrates product ownership across a broad consumer surface, not only isolated screen implementation.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap closing"><div class="section-no">Continue exploring</div><h2>See the rest of my mobile engineering work.</h2><p>More shipped products, connected-device systems, and architecture work are available in the main portfolio.</p><div class="actions"><a class="button primary" href="../../#projects">Back to projects</a><a class="button" href="mailto:sarosh.mobileengineer@gmail.com">Start a conversation</a></div></section>
+    </main>
+    <footer class="wrap"><span>© Muhammad Sarosh</span><span>Case study · Outdey</span></footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
