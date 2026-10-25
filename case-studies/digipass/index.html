@@ -2,330 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="DigiPass is a cross-platform mobile credential that connects account provisioning, proximity-aware BLE discovery, and a native AES challenge-response flow."
-    />
-    <meta name="theme-color" content="#071114" />
-    <title>DigiPass — Mobile Access Credential</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="DigiPass case study: a cross-platform mobile credential combining tenant provisioning, proximity-aware BLE discovery, and native AES challenge-response authentication." />
+    <meta property="og:title" content="DigiPass — Secure BLE Credential Case Study" />
+    <meta property="og:description" content="How Muhammad Sarosh turned a native BLE security protocol into one calm mobile interaction." />
+    <meta property="og:image" content="https://mobileengineersarosh.vercel.app/case-studies/digipass/assets/credential-card.png" />
+    <meta property="og:url" content="https://mobileengineersarosh.vercel.app/case-studies/digipass/" />
+    <meta name="theme-color" content="#182d67" />
+    <title>DigiPass — Secure BLE Credential Case Study</title>
+    <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body>
-    <div class="grain" aria-hidden="true"></div>
-
-    <header class="nav-shell">
-      <a class="brand" href="../../" aria-label="Back to Muhammad Sarosh portfolio">
-        <span class="brand-mark" aria-hidden="true">D</span>
-        <span>DigiPass</span>
-      </a>
-      <nav aria-label="Case study navigation">
-        <a href="#challenge">Challenge</a>
-        <a href="#flow">Flow</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#reflection">Reflection</a>
-      </nav>
-      <a class="nav-cta" href="#demo">Try interaction</a>
+  <body class="digipass">
+    <header class="wrap nav">
+      <a class="brand" href="../../">DigiPass</a>
+      <nav class="nav-links" aria-label="Case study navigation"><a href="#problem">Problem</a><a href="#architecture">Architecture</a><a href="#ble">BLE challenge</a><a class="nav-cta" href="../../#projects">All projects</a></nav>
     </header>
 
-    <main id="top">
-      <section class="hero section-pad">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span> Product &amp; engineering case study</div>
-          <h1>Your phone.<br />Your credential.<br /><em>One tap.</em></h1>
-          <p class="hero-lede">
-            A tenant-aware mobile access experience that turns a complex Nedap BLE
-            authentication protocol into a calm, familiar digital card.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#challenge">Explore the case study</a>
-            <a class="button quiet" href="#architecture">See the architecture <span>↘</span></a>
-          </div>
-          <dl class="hero-facts" aria-label="Project facts">
-            <div><dt>Role</dt><dd>Mobile product engineering</dd></div>
-            <div><dt>Platforms</dt><dd>Flutter · Android · iOS</dd></div>
-            <div><dt>Core</dt><dd>BLE · AES · Platform channels</dd></div>
-          </dl>
-        </div>
-
-        <div class="hero-visual reveal" data-delay="160">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="signal-label signal-a"><i></i> Reader in range</div>
-          <div class="signal-label signal-b"><i></i> Credential ready</div>
-
-          <div class="phone" id="demo" aria-label="Interactive DigiPass phone mockup">
-            <div class="phone-speaker"></div>
-            <div class="phone-screen">
-              <div class="phone-topbar">
-                <span>9:41</span>
-                <span class="phone-status">● ◒ ▰</span>
-              </div>
-              <div class="phone-app">
-                <div class="mini-brand">DIGIPASS</div>
-                <div class="credential-card">
-                  <img src="./assets/credential-card.png" alt="" width="1272" height="1780" fetchpriority="high" decoding="async" />
-                  <div class="credential-content">
-                    <span class="credential-label">COMPANY</span>
-                    <strong>Northstar Labs</strong>
-                    <span class="credential-label second">MEMBER</span>
-                    <strong>Alex Morgan</strong>
-                    <div class="credential-status"><i></i> Active credential</div>
-                    <div class="credential-logo">D<span>•</span></div>
-                  </div>
-                </div>
-                <p class="phone-prompt" id="phonePrompt">Ready near your assigned reader</p>
-                <button class="auth-button" id="authButton" type="button" aria-describedby="phonePrompt">
-                  <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M7.5 6.4 12 10V3l4.6 3.7L13.2 12l3.4 5.3L12 21v-7l-4.5 3.6L6 15.7l4.6-3.7L6 8.3l1.5-1.9Zm6.2.5v2.2l1.4-1.2-1.4-1Zm0 8v2.2l1.4-1.1-1.4-1.1Z" />
-                  </svg>
-                  <span class="auth-ripple"></span>
-                </button>
-                <span class="tap-label">Tap to authenticate</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <main>
+      <section class="wrap hero">
+        <div class="reveal"><div class="eyebrow">Secure access case study</div><h1>One tap.<br /><em>Native security underneath.</em></h1><p class="lede">DigiPass turns tenant setup, identity, assigned-reader discovery, and an encrypted BLE handshake into a familiar mobile credential.</p><div class="actions"><a class="button primary" href="#problem">Read the case study</a><a class="button" href="#architecture">See the architecture</a></div></div>
+        <div class="hero-art reveal"><span class="float-label one">Assigned reader only</span><span class="float-label two">AES challenge–response</span><div class="hero-phone"><img src="./assets/credential-card.png" alt="DigiPass digital access credential" width="1272" height="1780" fetchpriority="high" decoding="async" /><div class="credential-preview" aria-hidden="true"><span>Digital credential</span><strong>Northstar Labs</strong><small>Alex Morgan · Active</small><b>D<span>•</span></b></div></div></div>
       </section>
 
-      <section class="ticker" aria-label="Technology highlights">
-        <div class="ticker-track">
-          <span>QR provisioning</span><i></i><span>GetX</span><i></i><span>CoreBluetooth</span><i></i>
-          <span>BluetoothGatt</span><i></i><span>AES-128</span><i></i><span>Offline continuity</span><i></i>
-          <span>QR provisioning</span><i></i><span>GetX</span><i></i><span>CoreBluetooth</span><i></i>
-          <span>BluetoothGatt</span><i></i><span>AES-128</span><i></i><span>Offline continuity</span><i></i>
-        </div>
+      <dl class="wrap facts reveal" aria-label="Project facts"><div class="fact"><dt>Role</dt><dd>Mobile product engineer</dd></div><div class="fact"><dt>Platforms</dt><dd>Flutter · Android · iOS</dd></div><div class="fact"><dt>Native layer</dt><dd>Java · Swift</dd></div><div class="fact"><dt>Protocol</dt><dd>BLE · AES</dd></div><div class="fact"><dt>Hardest constraint</dt><dd>Async callback ordering</dd></div><div class="fact"><dt>Result</dt><dd>One-action credential flow</dd></div></dl>
+
+      <section class="wrap section" id="problem">
+        <div class="section-head"><div><div class="section-no">01 / Problem</div><h2>Security is complex. The experience <em>cannot be.</em></h2></div><div class="section-intro"><p>Physical access combines organization-specific configuration, identity, nearby hardware, and cryptography. The user should not need to choose a peripheral, interpret BLE state, or understand the protocol to open the right door.</p></div></div>
+        <div class="constraint-grid"><article class="card reveal"><span class="index">01</span><h3>Tenant-aware setup</h3><p>A QR code configures and validates the organization before the user signs in, allowing one app to serve multiple tenants.</p></article><article class="card reveal"><span class="index">02</span><h3>Correct reader</h3><p>Nearby devices are filtered by proximity and matched against the reader assigned by the backend—no technical picker required.</p></article><article class="card reveal"><span class="index">03</span><h3>Native protocol</h3><p>Android and iOS expose different BLE lifecycles, but both must complete the same secure challenge–response.</p></article></div>
       </section>
 
-      <section class="challenge section-pad" id="challenge">
-        <div class="section-kicker reveal">01 / The challenge</div>
-        <div class="challenge-grid">
-          <div class="challenge-title reveal">
-            <h2>Security is complex.<br />The experience <em>cannot be.</em></h2>
-          </div>
-          <div class="challenge-copy reveal" data-delay="120">
-            <p class="lead">
-              Physical access sits at the intersection of identity, proximity, hardware,
-              and trust. The product had to coordinate every layer without asking the user
-              to understand any of them.
-            </p>
-            <p>
-              A successful experience begins with the right organization, validates the
-              user's account and phone, finds only the assigned nearby reader, and completes
-              a cryptographic handshake—all from one deliberate tap.
-            </p>
-          </div>
-        </div>
-        <div class="constraint-row">
-          <article class="constraint reveal">
-            <span class="constraint-no">01</span>
-            <h3>Multi-tenant setup</h3>
-            <p>One app needed to support organization-specific services and branding without a separate build.</p>
-          </article>
-          <article class="constraint reveal" data-delay="80">
-            <span class="constraint-no">02</span>
-            <h3>Reader selection</h3>
-            <p>Users should never choose from a noisy list of nearby BLE peripherals or technical identifiers.</p>
-          </article>
-          <article class="constraint reveal" data-delay="160">
-            <span class="constraint-no">03</span>
-            <h3>Native protocol</h3>
-            <p>Android and iOS expose different BLE APIs, but both had to produce the same authentication outcome.</p>
-          </article>
-        </div>
-      </section>
+      <section class="dark section" id="architecture"><div class="wrap"><div class="section-head"><div><div class="section-no">02 / Architecture</div><h2>Shared journey. <em>Native protocol control.</em></h2></div><div class="section-intro"><p>Flutter owns provisioning, account state, and the credential experience. Platform channels hand hardware-sensitive work to Java and Swift, where BluetoothGatt and CoreBluetooth control the exchange.</p></div></div><div class="arch-flow reveal" aria-label="DigiPass architecture flow"><div class="arch-node"><b>Tenant + identity API</b><span>Endpoint · user status · reader · credential</span></div><div class="arrow">→</div><div class="arch-node accent"><b>Flutter orchestration</b><span>Provisioning · account · credential UI</span></div><div class="arrow">→</div><div class="arch-node"><b>Java + Swift bridge</b><span>Platform channels · AES · BLE state</span></div><div class="arrow">→</div><div class="arch-node"><b>Access reader</b><span>Challenge · response · result</span></div></div></div></section>
 
-      <section class="solution-band">
-        <div class="section-pad solution-inner">
-          <div class="section-kicker pale reveal">02 / Product response</div>
-          <div class="solution-heading reveal">
-            <h2>A credential journey<br />with <em>no loose ends.</em></h2>
-            <p>Provision. Activate. Approach. Authenticate.</p>
-          </div>
-          <div class="journey" id="flow">
-            <article class="journey-step reveal">
-              <div class="journey-icon qr-icon" aria-hidden="true"><span></span><span></span><span></span></div>
-              <span class="step-count">01</span>
-              <h3>Provision the tenant</h3>
-              <p>Scan an organization QR code, validate the endpoint, and retain it for the next launch.</p>
-              <span class="step-meta">Camera · HTTP · Preferences</span>
-            </article>
-            <article class="journey-step reveal" data-delay="80">
-              <div class="journey-icon id-icon" aria-hidden="true"><span></span></div>
-              <span class="step-count">02</span>
-              <h3>Activate the identity</h3>
-              <p>Sign in or complete the OTP flow to receive account status, assigned reader, ID, and key material.</p>
-              <span class="step-meta">Device binding · Account API</span>
-            </article>
-            <article class="journey-step reveal" data-delay="160">
-              <div class="journey-icon radar-icon" aria-hidden="true"><span></span></div>
-              <span class="step-count">03</span>
-              <h3>Find the right reader</h3>
-              <p>Filter by estimated proximity, then automatically match the reader assigned by the backend.</p>
-              <span class="step-meta">RSSI · BLE discovery</span>
-            </article>
-            <article class="journey-step reveal" data-delay="240">
-              <div class="journey-icon key-icon" aria-hidden="true"><span></span></div>
-              <span class="step-count">04</span>
-              <h3>Prove the credential</h3>
-              <p>Derive a credential-specific key and complete the native challenge-response exchange.</p>
-              <span class="step-meta">AES · GATT · CoreBluetooth</span>
-            </article>
-          </div>
-        </div>
-      </section>
+      <section class="wrap section" id="ble"><div class="section-head"><div><div class="section-no">03 / Hard BLE problem</div><h2>The edge case was the <em>order of events.</em></h2></div><div class="section-intro"><p>On Android, the reader challenge could arrive before the ID-write callback. Treating one callback order as guaranteed made authentication intermittent across devices, so the flow had to synchronize prerequisites instead of sequence assumptions.</p></div></div><div class="reliability-grid"><article class="card reveal"><span class="index">A</span><h3>Coordinate, do not assume</h3><p>The native state machine records both the completed write and received challenge, then advances only when both are ready.</p></article><article class="card reveal"><span class="index">B</span><h3>Keep secrets native</h3><p>Key derivation, AES messages, characteristic writes, and callback sequencing stay below the Flutter UI boundary.</p></article><article class="card reveal"><span class="index">C</span><h3>Report useful states</h3><p>The shared layer receives clear progress and failure events so the credential remains understandable during radio or protocol errors.</p></article></div></section>
 
-      <section class="decisions section-pad">
-        <div class="section-kicker reveal">03 / Design decisions</div>
-        <div class="decisions-head reveal">
-          <h2>Make the system do<br />the <em>remembering.</em></h2>
-          <p>The best access experience is the one that removes decisions at the door.</p>
-        </div>
-        <div class="decision-grid">
-          <article class="decision-card featured reveal">
-            <span class="card-label">The central interaction</span>
-            <h3>One button,<br />one clear state.</h3>
-            <div class="button-study" aria-hidden="true">
-              <div class="button-ring ring-3"></div><div class="button-ring ring-2"></div><div class="button-ring ring-1"></div>
-              <div class="button-core">⌁</div>
-            </div>
-            <p>Account status, radio readiness, reader discovery, and protocol progress resolve behind one action.</p>
-          </article>
-          <article class="decision-card reveal" data-delay="80">
-            <span class="card-label">Tenant-aware</span>
-            <h3>Configuration arrives before credentials.</h3>
-            <p>A validated QR endpoint makes the same application adaptable to each organization.</p>
-            <div class="mini-diagram tenant-diagram" aria-hidden="true">
-              <span>QR</span><b>→</b><span>Verify</span><b>→</b><span>Tenant</span>
-            </div>
-          </article>
-          <article class="decision-card reveal" data-delay="120">
-            <span class="card-label">Proximity-aware</span>
-            <h3>The assigned reader finds you.</h3>
-            <p>RSSI reduces irrelevant devices; the backend-assigned reader name removes manual selection.</p>
-            <div class="proximity-viz" aria-hidden="true"><i></i><i></i><i></i><span>PHONE</span><b>READER</b></div>
-          </article>
-          <article class="decision-card reveal" data-delay="160">
-            <span class="card-label">Local continuity</span>
-            <h3>Recognizable even when the network is not.</h3>
-            <p>Cached account context and tenant branding restore the credential experience during temporary outages.</p>
-            <div class="offline-line"><span>Cloud</span><i></i><strong>Local credential</strong></div>
-          </article>
-        </div>
-      </section>
+      <section class="dark section"><div class="wrap outcome"><div class="outcome-copy"><div class="section-no">04 / Result</div><h2>Deep protocol work, hidden inside <em>one calm tap.</em></h2><p>The product resolves tenant, identity, proximity, platform BLE behavior, and cryptography behind a focused credential action. The result is a simpler user experience without pretending the security layer is simple.</p></div><div class="outcome-list"><article><span>01</span><div><h3>Product outcome</h3><p>A tenant-aware digital credential with automatic assigned-reader selection and consistent Android/iOS behavior.</p></div></article><article><span>02</span><div><h3>Engineering outcome</h3><p>Flutter orchestration with explicit native boundaries for BluetoothGatt, CoreBluetooth, AES, and order-independent callbacks.</p></div></article><article><span>03</span><div><h3>Production priorities</h3><p>Hardware-backed secret storage, nonce and reader-proof validation, explicit offline policy, and protocol fixtures.</p></div></article></div></div></section>
 
-      <section class="architecture section-pad" id="architecture">
-        <div class="section-kicker pale reveal">04 / Technical architecture</div>
-        <div class="architecture-head reveal">
-          <h2>Shared product layer.<br /><em>Native protocol control.</em></h2>
-          <p>Flutter owns the journey. Java and Swift own the hardware handshake.</p>
-        </div>
-
-        <div class="architecture-map reveal">
-          <div class="arch-column">
-            <span class="arch-label">Identity</span>
-            <div class="arch-node bright"><i>01</i><strong>Tenant API</strong><small>User · status · reader · credential</small></div>
-          </div>
-          <div class="arch-connector"><span>HTTPS</span></div>
-          <div class="arch-column wide">
-            <span class="arch-label">Shared product experience</span>
-            <div class="arch-node cyan"><i>02</i><strong>Flutter + GetX</strong><small>Provisioning · account · digital card · orchestration</small></div>
-            <div class="channel-row"><span>MethodChannel ↓</span><span>↑ EventChannel</span></div>
-            <div class="native-row">
-              <div class="arch-node dark"><i>A</i><strong>Android / Java</strong><small>BluetoothGatt · AES</small></div>
-              <div class="arch-node dark"><i>I</i><strong>iOS / Swift</strong><small>CoreBluetooth · AES</small></div>
-            </div>
-          </div>
-          <div class="arch-connector"><span>BLE</span></div>
-          <div class="arch-column">
-            <span class="arch-label">Physical edge</span>
-            <div class="arch-node reader-node"><i>03</i><strong>Nedap reader</strong><small>ID · RX · TX characteristics</small></div>
-          </div>
-        </div>
-
-        <div class="protocol reveal">
-          <div class="protocol-copy">
-            <span class="card-label">Challenge–response</span>
-            <h3>Three messages.<br />One verified flow.</h3>
-            <p>The UI never handles cryptographic bytes. Native code derives the key, sequences GATT callbacks, and reports the result.</p>
-          </div>
-          <div class="protocol-sequence" aria-label="Authentication protocol sequence">
-            <div class="protocol-party"><span>PHONE</span><i></i></div>
-            <div class="sequence-lines">
-              <div><span><b>0x41</b> Reader challenge</span><i class="left"></i></div>
-              <div><span><b>0x42</b> Encrypted response</span><i class="right"></i></div>
-              <div><span><b>0x43</b> Authentication finish</span><i class="left"></i></div>
-            </div>
-            <div class="protocol-party reader"><i></i><span>READER</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="engineering section-pad">
-        <div class="section-kicker reveal">05 / Engineering depth</div>
-        <div class="engineering-grid">
-          <div class="engineering-lead reveal">
-            <h2>The edge case was<br /><em>the order of events.</em></h2>
-            <p>
-              On Android, the reader challenge could arrive before the ID write callback.
-              Assuming one callback order would make authentication intermittent across devices.
-            </p>
-          </div>
-          <div class="state-machine reveal" data-delay="100">
-            <div class="state-header"><span>Android callback synchronizer</span><b>LIVE LOGIC</b></div>
-            <div class="state-path">
-              <div class="state-node"><i>1</i><strong>ID write starts</strong><small>INITIAL_STATE</small></div>
-              <div class="state-split"><span>write first</span><span>challenge first</span></div>
-              <div class="state-branches">
-                <div><strong>Mark ready</strong><small>ID_WRITE_COMPLETE</small></div>
-                <div><strong>Buffer bytes</strong><small>ID_RESPONSE_COMPLETE</small></div>
-              </div>
-              <div class="state-merge">Both prerequisites complete</div>
-              <div class="state-node success"><i>✓</i><strong>Send AES response</strong><small>order-independent</small></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="reflection section-pad" id="reflection">
-        <div class="section-kicker pale reveal">06 / Reflection</div>
-        <div class="reflection-grid">
-          <div class="reflection-title reveal">
-            <h2>What I would take<br /><em>to production next.</em></h2>
-          </div>
-          <div class="reflection-list">
-            <article class="reveal"><span>01</span><div><h3>Hardware-backed secret storage</h3><p>Move credential-bearing material into Android Keystore and iOS Keychain with explicit lifecycle rules.</p></div></article>
-            <article class="reveal"><span>02</span><div><h3>Full protocol verification</h3><p>Use a cryptographically secure nonce for every attempt and validate the reader's proof, not only its finish marker.</p></div></article>
-            <article class="reveal"><span>03</span><div><h3>Explicit offline policy</h3><p>Define credential expiry, revocation, status refresh, and the precise conditions for offline authentication.</p></div></article>
-            <article class="reveal"><span>04</span><div><h3>Known-answer test suite</h3><p>Cover key derivation, AES messages, callback ordering, channel contracts, and fake-reader state transitions.</p></div></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="closing section-pad">
-        <div class="closing-orb"></div>
-        <div class="closing-copy reveal">
-          <span class="section-kicker pale">The outcome</span>
-          <h2>Deep protocol work,<br /><em>hidden inside one calm tap.</em></h2>
-          <p>
-            DigiPass connects tenant provisioning, identity, proximity, native Bluetooth,
-            and cryptography into a mobile credential experience that feels immediate.
-          </p>
-          <a class="button light" href="#top">Back to top <span>↑</span></a>
-        </div>
-        <div class="closing-stats reveal" data-delay="140">
-          <div><strong>2</strong><span>native platforms</span></div>
-          <div><strong>3</strong><span>protocol messages</span></div>
-          <div><strong>1</strong><span>user action</span></div>
-        </div>
-      </section>
+      <section class="wrap closing"><div class="section-no">Continue exploring</div><h2>See more connected-device engineering.</h2><p>Explore BLE platforms, sports hardware, wearable health systems, and other shipped products in the main portfolio.</p><div class="actions"><a class="button primary" href="../../#connected-devices">Back to connected projects</a><a class="button" href="mailto:sarosh.mobileengineer@gmail.com">Start a conversation</a></div></section>
     </main>
-
-    <footer>
-      <a href="../../">← Muhammad Sarosh portfolio</a>
-      <span>Product &amp; engineering case study</span>
-    </footer>
-
-    <script src="./script.js"></script>
+    <footer class="wrap"><span>© Muhammad Sarosh</span><span>Case study · DigiPass</span></footer>
+    <script src="../script.js"></script>
   </body>
 </html>
