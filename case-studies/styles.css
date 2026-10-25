@@ -19,7 +19,7 @@ body.outdey { --accent: #f47437; --accent-soft: #ffeadf; --accent-ink: #713116; 
 body.unix { --accent: #7355db; --accent-soft: #ebe5ff; --accent-ink: #2f206e; }
 body.bluedash { --accent: #2bafcf; --accent-soft: #def7fc; --accent-ink: #075266; }
 body.plyomat { --accent: #ee7a35; --accent-soft: #ffeadb; --accent-ink: #692c0c; }
-body.digipass { --accent: #35c7d5; --accent-soft: #def8fa; --accent-ink: #075460; }
+body.secure-access { --accent: #35c7d5; --accent-soft: #def8fa; --accent-ink: #075460; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 .wrap { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
@@ -51,13 +51,13 @@ h1 em, h2 em { color: transparent; background: linear-gradient(95deg, #48d0e5, v
 .hero-phone { width: 200px; height: 410px; padding: 7px; position: relative; z-index: 2; background: #0d1013; border-radius: 34px; box-shadow: 0 26px 60px rgba(0,0,0,.32); transform: rotate(3deg); }
 .hero-phone img { width: 100%; height: 100%; border-radius: 28px; object-fit: cover; object-position: top; }
 .credential-preview { position: absolute; z-index: 3; inset: 0; padding: 68px 25px 25px; display: none; flex-direction: column; color: white; }
-body.digipass .credential-preview { display: flex; }
+body.secure-access .credential-preview { display: flex; }
 .credential-preview > span { color: rgba(255,255,255,.64); font-size: 8px; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
 .credential-preview strong { margin-top: 8px; font-size: 19px; letter-spacing: -.03em; }
 .credential-preview small { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.76); font-size: 9px; }
 .credential-preview b { width: 42px; height: 42px; margin-top: auto; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; font-size: 18px; }
 .credential-preview b span { color: #61d7e3; }
-body.digipass .float-label.one { top: 7%; }
+body.secure-access .float-label.one { top: 7%; }
 .float-label { position: absolute; z-index: 3; padding: 10px 12px; color: var(--accent-ink); background: white; border-radius: 10px; font-size: 9px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 12px 28px rgba(0,0,0,.18); }
 .float-label.one { left: 5%; top: 22%; }.float-label.two { right: 4%; bottom: 18%; }
 
