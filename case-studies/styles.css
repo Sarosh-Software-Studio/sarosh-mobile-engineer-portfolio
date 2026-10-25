@@ -16,6 +16,7 @@ body { margin: 0; background: var(--paper); color: var(--ink); font-family: Inte
 body.outdey { --accent: #ff6433; --accent-soft: #ffe1d5; --accent-ink: #6b1d08; }
 body.unix { --accent: #7b55e7; --accent-soft: #e9e0ff; --accent-ink: #29145f; }
 body.bluedash { --accent: #1aa7d5; --accent-soft: #d7f4fc; --accent-ink: #073e55; }
+body.plyomat { --accent: #ef7b35; --accent-soft: #ffeadb; --accent-ink: #63260a; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 .wrap { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }

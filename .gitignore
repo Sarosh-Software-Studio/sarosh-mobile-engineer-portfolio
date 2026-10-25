@@ -1,0 +1,17 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Editor and local environment files
+.idea/
+.vscode/
+*.swp
+*.swo
+.env
+.env.*
+
+# Local preview and dependency output
+node_modules/
+dist/
+.vercel/
+

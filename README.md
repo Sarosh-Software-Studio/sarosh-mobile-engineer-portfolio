@@ -41,8 +41,8 @@ I enjoy solving the difficult parts of mobile engineering: reliable device commu
 
 | Product | Overview | Availability |
 | --- | --- | --- |
-| <img src="assets/bluedash-icon.webp" width="42" alt="BlueDash" /> **BlueDash** | A no-code BLE platform for discovering, monitoring, testing, and controlling custom IoT devices through reusable dashboards. | [App Store](https://apps.apple.com/us/app/bluedash/id6447548602) · [Google Play](https://play.google.com/store/apps/details?id=com.sparkleo.blueDashApp&hl=en) |
-| <img src="assets/plyomat-icon.webp" width="42" alt="Plyomat" /> **Plyomat 2.0** | A connected sports-measurement app that transforms live hardware data into plyometric metrics, session analysis, and exports. | [App Store](https://apps.apple.com/us/app/plyomat-2-0/id6446678552) · [Google Play](https://play.google.com/store/apps/details?id=net.plyomat.plyomattwo&hl=en) |
+| <img src="assets/bluedash-icon.webp" width="42" alt="BlueDash" /> **BlueDash** | A no-code BLE platform for discovering, monitoring, testing, and controlling custom IoT devices through reusable dashboards. | [Case study](case-studies/bluedash/) · [App Store](https://apps.apple.com/us/app/bluedash/id6447548602) · [Google Play](https://play.google.com/store/apps/details?id=com.sparkleo.blueDashApp&hl=en) |
+| <img src="assets/plyomat-icon.webp" width="42" alt="Plyomat" /> **Plyomat 2.0** | A connected sports-measurement app that transforms live hardware data into plyometric metrics, session analysis, and exports. | [Case study](case-studies/plyomat/) · [App Store](https://apps.apple.com/us/app/plyomat-2-0/id6446678552) · [Google Play](https://play.google.com/store/apps/details?id=net.plyomat.plyomattwo&hl=en) |
 | <img src="assets/unix-logo.png" width="42" alt="UniX" /> **UniX — University X** | A student-life platform combining housing, campus community, discovery, transport, study tools, and everyday services. | [App Store](https://apps.apple.com/us/app/unix-university-x/id6740775299) · [Google Play](https://play.google.com/store/apps/details?id=com.unix.com) |
 | <img src="assets/outdey-icon.png" width="42" alt="Outdey" /> **Outdey** | An end-to-end events platform covering discovery, social planning, ticketing, organizer workflows, and QR admission. | [App Store](https://apps.apple.com/us/app/outdey/id6497566952) · [Google Play](https://play.google.com/store/apps/details?id=com.outdey.outdey) |
 | <img src="assets/glo-icon.png" width="42" alt="glo" /> **glo** | A bilingual beauty-discovery experience with maps, filters, ratings, reviews, wishlists, and full Arabic RTL support. | [App Store](https://apps.apple.com/us/app/glo/id6503257805) · [Google Play](https://play.google.com/store/apps/details?id=com.rwnq.rwnq_app) |
@@ -83,7 +83,7 @@ The website includes:
 - Professional experience and technical capabilities.
 - Separate product and connected-device project paths.
 - Ownership, engineering decisions, and observable outcomes for each project.
-- In-depth case studies for Outdey, UniX, BlueDash, and a sanitized DigiPass/Nedap implementation.
+- In-depth case studies for Outdey, UniX, BlueDash, Plyomat 2.0, and a sanitized DigiPass/Nedap implementation.
 - Direct App Store and Google Play links.
 - Technology and tooling showcase.
 - Downloadable product and BLE/IoT résumé variants.
@@ -113,6 +113,10 @@ I am open to mobile engineering roles, selected product work, and technical conv
 - **Email:** [sarosh.mobileengineer@gmail.com](mailto:sarosh.mobileengineer@gmail.com)
 - **LinkedIn:** [linkedin.com/in/sarosh-tahir](https://www.linkedin.com/in/sarosh-tahir)
 - **GitHub:** [github.com/sarosh4271](https://github.com/sarosh4271)
+
+## License
+
+The website source code is available under the MIT License. Personal photographs, résumé files, branding, written portfolio content, project screenshots, case-study media, and third-party trademarks are excluded; see [LICENSE](LICENSE) for details.
 
 ---
 

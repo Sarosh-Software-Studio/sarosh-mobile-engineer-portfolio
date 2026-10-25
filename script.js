@@ -17,13 +17,6 @@ menuToggle?.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', opening);
 });
 
-document.querySelectorAll('[data-target]').forEach((button) => {
-  button.addEventListener('click', () => {
-    document.getElementById(button.dataset.target)?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' });
-    closeMenu();
-  });
-});
-
 document.querySelectorAll('.site-nav a, .brand').forEach((link) => link.addEventListener('click', closeMenu));
 
 if (reduceMotion) {

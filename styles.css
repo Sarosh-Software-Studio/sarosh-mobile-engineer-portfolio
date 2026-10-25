@@ -29,8 +29,8 @@ button { font: inherit; }
 .menu-toggle { display: none; width: 42px; height: 42px; padding: 7px; border: 0; background: transparent; cursor: pointer; }
 .menu-toggle span { display: block; height: 2px; margin: 6px 0; border-radius: 2px; background: white; transition: .25s; }
 .site-nav { display: flex; align-items: center; gap: 4px; }
-.site-nav button, .site-nav > a { padding: 10px 12px; color: rgba(255,255,255,.82); border: 0; background: transparent; font-size: 13px; cursor: pointer; }
-.site-nav button:hover, .site-nav > a:hover { color: white; }
+.site-nav > a { padding: 10px 12px; color: rgba(255,255,255,.82); border: 0; background: transparent; font-size: 13px; cursor: pointer; }
+.site-nav > a:hover, .site-nav > a:focus-visible { color: white; }
 .site-nav .nav-download { margin-left: 5px; color: #12182b; background: linear-gradient(105deg, #54d1e7, #8ab8ff); border-radius: 10px; font-weight: 800; }
 
 .hero { position: relative; min-height: 820px; display: grid; place-items: center; overflow: hidden; color: white; background: radial-gradient(circle at 50% 24%, rgba(133, 44, 207, .6), transparent 36%), linear-gradient(125deg, #182d67 0%, #541a85 48%, #10162d 100%); }
@@ -196,7 +196,7 @@ button { font: inherit; }
   .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
   .site-nav { position: fixed; z-index: 101; top: 72px; left: 0; right: 0; height: calc(100dvh - 72px); padding: 22px; display: grid; align-content: start; gap: 5px; overflow-y: auto; background: linear-gradient(155deg, #1f296b, #521b7e 58%, #101630); transform: translateX(105%); opacity: 0; transition: transform .3s, opacity .3s; }
   .site-nav.open { transform: translateX(0); opacity: 1; }
-  .site-nav button, .site-nav > a { padding: 17px 19px; border-bottom: 1px solid rgba(255,255,255,.1); text-align: left; font-size: 17px; }
+  .site-nav > a { padding: 17px 19px; border-bottom: 1px solid rgba(255,255,255,.1); text-align: left; font-size: 17px; }
   .site-nav .nav-download { margin: 8px 0 0; color: white; background: linear-gradient(95deg, rgba(47,103,232,.8), rgba(138,45,226,.8)); }
   .project-grid, .contact-actions { grid-template-columns: 1fr; }
   .tool-cloud { grid-template-columns: repeat(4, minmax(0, 1fr)); }
