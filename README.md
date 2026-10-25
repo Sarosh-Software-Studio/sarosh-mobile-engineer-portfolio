@@ -31,8 +31,8 @@ I enjoy solving the difficult parts of mobile engineering: reliable device commu
 ## Career highlights
 
 - **5+ years** building and shipping mobile products.
-- **15+ projects** delivered across multiple industries.
-- **10+ BLE applications** developed for connected hardware and IoT devices.
+- **15+ total client projects** delivered across public and confidential work in multiple industries.
+- **10+ connected-device applications** within that work, spanning BLE hardware and IoT devices.
 - **5 published products** released across the Apple App Store and Google Play.
 - Reduced mobile build-to-tester delivery time from approximately **30 minutes to 10 minutes** through release automation.
 - Experienced in peer code reviews, troubleshooting, architecture, feature design, technical documentation, and developer mentoring.
@@ -83,7 +83,7 @@ The website includes:
 - Professional experience and technical capabilities.
 - Separate product and connected-device project paths.
 - Ownership, engineering decisions, and observable outcomes for each project.
-- In-depth case studies for Outdey, UniX, BlueDash, Plyomat 2.0, and a sanitized DigiPass/Nedap implementation.
+- In-depth case studies for Outdey, UniX, BlueDash, Plyomat 2.0, and a sanitized private mobile-access integration.
 - Direct App Store and Google Play links.
 - Technology and tooling showcase.
 - Downloadable product and BLE/IoT résumé variants.
