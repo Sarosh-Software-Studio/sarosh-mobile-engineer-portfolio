@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
-  <title id="title">Muhammad Sarosh — Senior Mobile Engineer</title>
-  <desc id="description">Portfolio preview for Muhammad Sarosh, a Flutter, BLE, IoT, and native mobile engineering specialist.</desc>
+  <title id="title">Muhammad Sarosh — Mobile Engineer</title>
+  <desc id="description">Portfolio preview for Muhammad Sarosh, a mobile engineer building reliable Flutter products and connected-device experiences.</desc>
 
   <defs>
     <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
@@ -39,8 +39,8 @@
     <text x="68" y="207" fill="#ffffff" font-size="66" font-weight="800" letter-spacing="-1.7">Muhammad</text>
     <text x="68" y="277" fill="url(#accent)" font-size="66" font-weight="800" letter-spacing="-1.7">Sarosh</text>
 
-    <text x="68" y="339" fill="#eeeaff" font-size="29" font-weight="650">Senior Mobile Engineer</text>
-    <text x="68" y="382" fill="#bdb5dc" font-size="22">Building reliable, production-ready mobile products.</text>
+    <text x="68" y="339" fill="#eeeaff" font-size="29" font-weight="650">Mobile Engineer</text>
+    <text x="68" y="382" fill="#bdb5dc" font-size="22">Flutter products &amp; connected-device experiences.</text>
 
     <g transform="translate(68 425)" font-size="17" font-weight="700" fill="#f4f1ff">
       <g>
