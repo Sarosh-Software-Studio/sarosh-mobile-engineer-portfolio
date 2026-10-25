@@ -63,7 +63,7 @@ I enjoy solving the difficult parts of mobile engineering: reliable device commu
 
 ### Delivery, analytics, and growth
 
-`GitHub Actions` · `Fastlane` · `CI/CD` · `Mixpanel` · `Adapty` · `Superwall` · `Analytics Funnels` · `In-App Purchases`
+`GitHub Actions` · `Xcode Cloud` · `CI/CD` · `Mixpanel` · `Adapty` · `Superwall` · `Analytics Funnels` · `In-App Purchases`
 
 ## Professional experience
 

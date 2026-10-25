@@ -163,24 +163,13 @@ button { font: inherit; }
 .tool-cloud > span { min-height: 80px; padding: 11px 8px; display: grid; place-items: center; align-content: center; gap: 8px; color: #34394b; border: 1px solid var(--line); border-radius: 11px; background: #fbfbfd; text-align: center; font-size: 11px; }
 .tool-cloud img { width: 31px; height: 31px; object-fit: contain; }
 .tool-cloud img[src$="github-actions.svg"] { padding: 5px; border-radius: 8px; background: #171a2b; }
-.education-card { margin-top: 30px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: var(--shadow); scroll-margin-top: 100px; }
-.education-header { padding: 31px 33px; display: flex; align-items: center; justify-content: space-between; gap: 30px; color: white; background: radial-gradient(circle at 85% 30%, rgba(99,220,232,.23), transparent 29%), linear-gradient(120deg, #182956, #54277e); }
-.education-header p, .education-details span { margin: 0 0 8px; color: #6edbe9; font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
-.education-header h3 { margin: 0 0 8px; font-size: clamp(25px, 3vw, 36px); letter-spacing: -.035em; }
-.education-header > div > span { color: rgba(255,255,255,.7); font-size: 13px; }
-.degree-mark { width: 88px; height: 88px; flex: 0 0 88px; display: grid; place-content: center; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: rgba(255,255,255,.08); text-align: center; }
-.degree-mark strong { font-size: 25px; line-height: 1; }.degree-mark span { color: #6edbe9; font-size: 12px; font-weight: 900; letter-spacing: .18em; }
-.education-facts { display: grid; grid-template-columns: 1.35fr .8fr 1fr .8fr; border-bottom: 1px solid var(--line); }
-.education-facts > div { min-height: 112px; padding: 25px 22px; border-right: 1px solid var(--line); }
-.education-facts > div:last-child { border-right: 0; }
-.education-facts span { display: block; margin-bottom: 13px; color: var(--muted); font-size: 9px; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
-.education-facts strong { display: block; color: #30354a; font-size: 12px; line-height: 1.55; }
-.education-details { padding: 29px 32px 32px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 32px; }
-.coursework > span { display: block; margin-bottom: 15px; color: var(--purple); }
-.coursework > p { margin: -5px 0 18px; color: var(--muted); font-size: 12px; line-height: 1.55; }
-.coursework > div { display: flex; flex-wrap: wrap; gap: 8px; }
-.coursework em { padding: 8px 10px; color: #41465b; border: 1px solid var(--line); border-radius: 999px; background: #f8f8fb; font-size: 10px; font-style: normal; line-height: 1; }
-.focus-coursework { padding-right: 32px; border-right: 1px solid var(--line); }
+.education-card { margin-top: 30px; padding: 25px 30px; display: grid; grid-template-columns: 100px minmax(0, 1fr) auto; gap: 24px; align-items: center; border: 1px solid var(--line); border-radius: 18px; background: white; box-shadow: var(--shadow); scroll-margin-top: 100px; }
+.education-card > p { margin: 0; color: var(--purple); font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.education-details { min-width: 0; }
+.education-card h3 { margin: 0 0 8px; font-size: 20px; letter-spacing: -.02em; }
+.education-university { display: block; color: #3f4558; font-size: 13px; line-height: 1.45; }
+.education-school { margin-top: 3px; display: block; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.education-card time { padding-left: 24px; color: #30354a; border-left: 1px solid var(--line); font-size: 13px; font-weight: 800; white-space: nowrap; }
 
 .contact-section { position: relative; overflow: hidden; padding: 100px 0 0; color: white; background: radial-gradient(circle at 18% 35%, rgba(69,102,214,.33), transparent 28%), radial-gradient(circle at 84% 24%, rgba(131,44,198,.35), transparent 30%), linear-gradient(125deg, #101a43, #441472 52%, #10172f); }
 .contact-section .container { position: relative; z-index: 2; }
@@ -249,8 +238,8 @@ button { font: inherit; }
   .job-meta { justify-items: start; }
   .engineering-proof { align-items: stretch; flex-direction: column; }
   .tool-cloud { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .education-facts { grid-template-columns: 1fr 1fr; }.education-facts > div:nth-child(2) { border-right: 0; }.education-facts > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-  .education-details { grid-template-columns: 1fr; }.focus-coursework { padding: 0 0 27px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .education-card { grid-template-columns: 1fr; gap: 9px; padding: 23px 22px; }
+  .education-card time { margin-top: 4px; padding: 12px 0 0; border-top: 1px solid var(--line); border-left: 0; }
   .contact-section footer { display: grid; text-align: center; }
 }
 
