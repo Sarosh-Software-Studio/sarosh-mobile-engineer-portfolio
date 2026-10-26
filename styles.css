@@ -26,6 +26,11 @@ button { font: inherit; }
 .site-header { position: fixed; z-index: 100; inset: 0 0 auto; height: 72px; padding: 0 max(22px, calc((100vw - var(--max)) / 2)); display: flex; align-items: center; justify-content: space-between; color: white; background: linear-gradient(100deg, rgba(31, 41, 107, .96), rgba(83, 30, 130, .96) 54%, rgba(17, 23, 47, .97)); box-shadow: 0 4px 16px rgba(16, 17, 40, .18); backdrop-filter: blur(15px); }
 .brand { display: flex; align-items: center; gap: 10px; color: #72d7ef; font-weight: 800; }
 .brand img { width: 40px; height: 40px; object-fit: cover; object-position: center 22%; border: 2px solid #3ed1de; border-radius: 50%; box-shadow: 0 0 0 4px rgba(46, 200, 215, .12); }
+.header-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.header-linkedin { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; border: 0; background: transparent; transition: transform .2s, opacity .2s; }
+.header-linkedin img { width: 30px; height: 30px; border-radius: 7px; }
+.header-linkedin:hover { opacity: .86; transform: translateY(-2px); }
+.header-linkedin:focus-visible { outline: 2px solid #75dafa; outline-offset: 2px; border-radius: 8px; }
 .menu-toggle { display: none; width: 42px; height: 42px; padding: 7px; border: 0; background: transparent; cursor: pointer; }
 .menu-toggle span { display: block; height: 2px; margin: 6px 0; border-radius: 2px; background: white; transition: .25s; }
 .site-nav { display: flex; align-items: center; gap: 4px; }
@@ -208,6 +213,7 @@ button { font: inherit; }
 @media (max-width: 650px) {
   .container { width: min(calc(100% - 30px), var(--max)); }
   .site-header { height: 66px; padding-inline: 17px; }
+  .header-actions { gap: 4px; }
   .site-nav { top: 66px; height: calc(100dvh - 66px); }
   .hero { min-height: 100svh; }
   .hero-inner { padding: 94px 0 56px; }
