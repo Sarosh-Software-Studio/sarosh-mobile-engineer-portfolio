@@ -27,10 +27,12 @@ button { font: inherit; }
 .brand { display: flex; align-items: center; gap: 10px; color: #72d7ef; font-weight: 800; }
 .brand img { width: 40px; height: 40px; object-fit: cover; object-position: center 22%; border: 2px solid #3ed1de; border-radius: 50%; box-shadow: 0 0 0 4px rgba(46, 200, 215, .12); }
 .header-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
-.header-linkedin { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; border: 0; background: transparent; transition: transform .2s, opacity .2s; }
+.header-linkedin, .header-cv { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; border: 0; background: transparent; transition: transform .2s, opacity .2s; }
 .header-linkedin img { width: 30px; height: 30px; border-radius: 7px; }
-.header-linkedin:hover { opacity: .86; transform: translateY(-2px); }
-.header-linkedin:focus-visible { outline: 2px solid #75dafa; outline-offset: 2px; border-radius: 8px; }
+.header-cv { color: #75dafa; }
+.header-cv svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.header-linkedin:hover, .header-cv:hover { opacity: .86; transform: translateY(-2px); }
+.header-linkedin:focus-visible, .header-cv:focus-visible { outline: 2px solid #75dafa; outline-offset: 2px; border-radius: 8px; }
 .menu-toggle { display: none; width: 42px; height: 42px; padding: 7px; border: 0; background: transparent; cursor: pointer; }
 .menu-toggle span { display: block; height: 2px; margin: 6px 0; border-radius: 2px; background: white; transition: .25s; }
 .site-nav { display: flex; align-items: center; gap: 4px; }
@@ -187,8 +189,9 @@ button { font: inherit; }
 .contact-actions span { grid-row: span 2; width: 42px; height: 42px; display: grid; place-items: center; color: #75dafa; border-radius: 50%; background: rgba(74,190,228,.13); font-weight: 900; }
 .contact-actions strong { align-self: end; font-size: 15px; }
 .contact-actions small { color: rgba(255,255,255,.5); }
-.resume-switch { margin: 22px 0 70px; color: rgba(255,255,255,.56); text-align: center; font-size: 13px; }
+.resume-switch { margin: 22px 0 70px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 13px; color: rgba(255,255,255,.56); text-align: center; font-size: 13px; }
 .resume-switch a { color: #7edcf0; border-bottom: 1px solid rgba(126,220,240,.4); }
+.resume-switch > i { width: 1px; height: 15px; background: rgba(255,255,255,.2); }
 .contact-section footer { padding: 25px 0; display: flex; justify-content: space-between; gap: 25px; color: rgba(255,255,255,.45); border-top: 1px solid rgba(255,255,255,.1); font-size: 11px; }
 
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
@@ -247,6 +250,8 @@ button { font: inherit; }
   .education-card { grid-template-columns: 1fr; gap: 9px; padding: 23px 22px; }
   .education-card time { margin-top: 4px; padding: 12px 0 0; border-top: 1px solid var(--line); border-left: 0; }
   .contact-section footer { display: grid; text-align: center; }
+  .resume-switch { display: grid; gap: 10px; }
+  .resume-switch > i { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
