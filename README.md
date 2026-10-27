@@ -90,6 +90,7 @@ The website includes:
 - Downloadable product and BLE/IoT résumé variants.
 - Accessible navigation and reduced-motion support.
 - Direct email, LinkedIn, and résumé actions.
+- Search metadata, canonical URLs, structured data, and an XML sitemap for the portfolio and case studies.
 
 ## Project structure
 
@@ -98,6 +99,9 @@ The website includes:
 ├── index.html              # Portfolio content and page structure
 ├── styles.css              # Responsive design and visual system
 ├── script.js               # Navigation, reveal effects, and analytics hooks
+├── robots.txt              # Search crawler guidance and sitemap location
+├── sitemap.xml             # Canonical portfolio and case-study URLs
+├── vercel.json             # Hosting headers, including PDF noindex rules
 ├── case-studies/           # Sanitized technical case studies
 └── assets/
     ├── tools/              # Technology logos
@@ -106,6 +110,12 @@ The website includes:
     ├── *.webp              # Optimized project assets
     └── muhammad-sarosh-*-resume.pdf
 ```
+
+## Search indexing
+
+The deployed site exposes `robots.txt` and `sitemap.xml`, and every public HTML page has a canonical URL, unique search/social metadata, and structured data. Résumé PDFs remain downloadable but receive an `X-Robots-Tag: noindex, noarchive` header on Vercel so the HTML portfolio is the intended search result.
+
+After deploying a metadata change, submit `https://mobileengineersarosh.vercel.app/sitemap.xml` in Google Search Console and use URL Inspection to request indexing for the homepage and updated case studies.
 
 ## Contact
 
