@@ -13,7 +13,8 @@
     <a href="mailto:sarosh.mobileengineer@gmail.com">Email</a> ·
     <a href="https://www.linkedin.com/in/sarosh-tahir">LinkedIn</a> ·
     <a href="https://github.com/sarosh4271">GitHub</a> ·
-    <a href="assets/muhammad-sarosh-product-mobile-resume.pdf">Product Resume</a> ·
+    <a href="assets/muhammad-sarosh-cv.pdf">Full CV</a> ·
+    <a href="assets/muhammad-sarosh-flutter-product-resume.pdf">Product Resume</a> ·
     <a href="assets/muhammad-sarosh-ble-iot-resume.pdf">BLE/IoT Resume</a>
   </p>
 </div>
