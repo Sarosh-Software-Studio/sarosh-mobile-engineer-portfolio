@@ -187,8 +187,9 @@ button { font: inherit; }
 .contact-actions span { grid-row: span 2; width: 42px; height: 42px; display: grid; place-items: center; color: #75dafa; border-radius: 50%; background: rgba(74,190,228,.13); font-weight: 900; }
 .contact-actions strong { align-self: end; font-size: 15px; }
 .contact-actions small { color: rgba(255,255,255,.5); }
-.resume-switch { margin: 22px 0 70px; color: rgba(255,255,255,.56); text-align: center; font-size: 13px; }
+.resume-switch { margin: 22px 0 70px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 13px; color: rgba(255,255,255,.56); text-align: center; font-size: 13px; }
 .resume-switch a { color: #7edcf0; border-bottom: 1px solid rgba(126,220,240,.4); }
+.resume-switch > i { width: 1px; height: 15px; background: rgba(255,255,255,.2); }
 .contact-section footer { padding: 25px 0; display: flex; justify-content: space-between; gap: 25px; color: rgba(255,255,255,.45); border-top: 1px solid rgba(255,255,255,.1); font-size: 11px; }
 
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
@@ -247,6 +248,8 @@ button { font: inherit; }
   .education-card { grid-template-columns: 1fr; gap: 9px; padding: 23px 22px; }
   .education-card time { margin-top: 4px; padding: 12px 0 0; border-top: 1px solid var(--line); border-left: 0; }
   .contact-section footer { display: grid; text-align: center; }
+  .resume-switch { display: grid; gap: 10px; }
+  .resume-switch > i { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
