@@ -104,6 +104,7 @@ The website includes:
 ├── vercel.json             # Hosting headers, including PDF noindex rules
 ├── case-studies/           # Sanitized technical case studies
 └── assets/
+    ├── optimized/          # Right-sized WebP display assets for faster page loads
     ├── tools/              # Technology logos
     ├── store/              # App Store and Google Play icons
     ├── *.png, *.jpg        # Project screenshots and profile images
