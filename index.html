@@ -25,8 +25,79 @@
     <meta name="twitter:image:alt" content="Muhammad Sarosh — Mobile Engineer portfolio preview." />
     <title>Muhammad Sarosh | Flutter &amp; BLE Mobile Engineer</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop stop-color='%232dc7df'/%3E%3Cstop offset='1' stop-color='%238b37e6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='31' fill='url(%23g)'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='20' font-weight='700' fill='white'%3EMS%3C/text%3E%3C/svg%3E" />
-    <link rel="preload" as="image" href="assets/optimized/muhammad-sarosh-avatar.webp" type="image/webp" fetchpriority="high" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="assets/optimized/muhammad-sarosh-avatar-160.webp" imagesrcset="assets/optimized/muhammad-sarosh-avatar-160.webp 160w, assets/optimized/muhammad-sarosh-avatar.webp 320w" imagesizes="(max-width: 650px) 82px, 94px" type="image/webp" fetchpriority="high" />
+    <style>
+      :root { --navy: #11172f; --blue: #2f67e8; --cyan: #2ec8d7; --purple: #8a2de2; --orange: #ff8a2f; --ink: #17182a; --muted: #606579; --line: #e2e5ed; --soft: #f6f7fb; --max: 1160px; --shadow: 0 16px 44px rgba(24, 29, 57, .09); }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+      body { margin: 0; color: var(--ink); background: white; font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+      body.menu-open { overflow: hidden; }
+      img { display: block; max-width: 100%; }
+      a { color: inherit; text-decoration: none; }
+      button { font: inherit; }
+      .skip-link { position: fixed; z-index: 1000; top: -60px; left: 18px; padding: 12px 18px; color: white; background: var(--blue); border-radius: 0 0 8px 8px; }
+      .skip-link:focus { top: 0; }
+      .container { width: min(calc(100% - 40px), var(--max)); margin-inline: auto; }
+      .site-header { position: fixed; z-index: 100; inset: 0 0 auto; height: 72px; padding: 0 max(22px, calc((100vw - var(--max)) / 2)); display: flex; align-items: center; justify-content: space-between; color: white; background: linear-gradient(100deg, rgba(31, 41, 107, .96), rgba(83, 30, 130, .96) 54%, rgba(17, 23, 47, .97)); box-shadow: 0 4px 16px rgba(16, 17, 40, .18); backdrop-filter: blur(15px); }
+      .brand { display: flex; align-items: center; gap: 10px; color: #72d7ef; font-weight: 800; }
+      .brand img { width: 40px; height: 40px; object-fit: cover; object-position: center 22%; border: 2px solid #3ed1de; border-radius: 50%; box-shadow: 0 0 0 4px rgba(46, 200, 215, .12); }
+      .header-actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+      .header-linkedin { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; border: 0; background: transparent; transition: transform .2s, opacity .2s; }
+      .header-linkedin img { width: 30px; height: 30px; border-radius: 7px; }
+      .header-linkedin:hover { opacity: .86; transform: translateY(-2px); }
+      .header-linkedin:focus-visible { outline: 2px solid #75dafa; outline-offset: 2px; border-radius: 8px; }
+      .menu-toggle { display: none; width: 42px; height: 42px; padding: 7px; border: 0; background: transparent; cursor: pointer; }
+      .menu-toggle span { display: block; height: 2px; margin: 6px 0; border-radius: 2px; background: white; transition: .25s; }
+      .site-nav { display: flex; align-items: center; gap: 4px; }
+      .site-nav > a { padding: 10px 12px; color: rgba(255,255,255,.82); border: 0; background: transparent; font-size: 13px; cursor: pointer; }
+      .site-nav > a:hover, .site-nav > a:focus-visible { color: white; }
+      .site-nav .nav-download { margin-left: 5px; color: #12182b; background: linear-gradient(105deg, #54d1e7, #8ab8ff); border-radius: 10px; font-weight: 800; }
+      .hero { position: relative; min-height: 820px; display: grid; place-items: center; overflow: hidden; color: white; background: radial-gradient(circle at 50% 24%, rgba(133, 44, 207, .6), transparent 36%), linear-gradient(125deg, #182d67 0%, #541a85 48%, #10162d 100%); }
+      .hero::before { content: ""; position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent); }
+      .stars { position: absolute; inset: 0; background-image: radial-gradient(circle at 18% 18%, white 0 1px, transparent 2px), radial-gradient(circle at 73% 22%, #8be8ff 0 1px, transparent 2px), radial-gradient(circle at 25% 75%, white 0 1px, transparent 2px), radial-gradient(circle at 85% 72%, #c2a2ff 0 1px, transparent 2px), radial-gradient(circle at 53% 60%, white 0 1px, transparent 2px); background-size: 270px 250px, 310px 280px, 340px 300px, 370px 320px, 430px 390px; animation: drift 18s linear infinite; }
+      .hero-inner { position: relative; z-index: 2; width: min(calc(100% - 36px), 1060px); padding: 112px 0 70px; text-align: center; }
+      .availability { width: fit-content; margin: 0 auto 18px; padding: 8px 15px; display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.72); border: 1px solid rgba(255,255,255,.19); border-radius: 999px; background: rgba(255,255,255,.055); font-size: 12px; backdrop-filter: blur(10px); }
+      .availability i { width: 9px; height: 9px; border-radius: 50%; background: #3ee277; box-shadow: 0 0 0 5px rgba(62,226,119,.12); }
+      .hero-portrait { width: 108px; height: 108px; margin: 0 auto 18px; padding: 4px; border: 3px solid #37c8dc; border-radius: 50%; background: rgba(255,255,255,.18); box-shadow: 0 0 28px rgba(55,200,220,.32); }
+      .hero-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; border-radius: 50%; }
+      .hero-kicker { margin: 0 0 15px; color: #77dff2; font-size: 14px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+      .hero h1 { max-width: 1000px; margin: 0 auto; font-size: clamp(39px, 5.7vw, 68px); line-height: 1.03; letter-spacing: -.05em; }
+      .hero h1 span { color: transparent; background: linear-gradient(95deg, #43d0e5, #9e6afb, #ff9a56); background-clip: text; -webkit-background-clip: text; }
+      .hero-summary { max-width: 880px; margin: 27px auto 0; color: rgba(255,255,255,.78); font-size: 17px; line-height: 1.72; }
+      .hero-actions { margin-top: 30px; display: flex; justify-content: center; gap: 13px; flex-wrap: wrap; }
+      .button { min-height: 50px; padding: 13px 20px; display: inline-flex; align-items: center; justify-content: center; border-radius: 11px; font-weight: 800; transition: transform .2s, box-shadow .2s; }
+      .button:hover { transform: translateY(-3px); box-shadow: 0 12px 25px rgba(0,0,0,.18); }
+      .button-warm { color: #1d2030; background: linear-gradient(105deg, #f5b83e, #fc7438); }
+      .button-outline { border: 2px solid rgba(255,255,255,.34); }
+      .button-cool { background: linear-gradient(105deg, #33bed8, #5994f1); }
+      .hero-secondary { margin-top: 19px; display: inline-block; color: rgba(255,255,255,.7); border-bottom: 1px solid rgba(255,255,255,.28); font-size: 13px; }
+      .hero-secondary:hover { color: white; }
+      .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+      @keyframes drift { to { transform: translate3d(30px, -20px, 0); } }
+      @media (max-width: 900px) {
+        .menu-toggle { display: block; }
+        .site-nav { position: fixed; z-index: 101; top: 72px; left: 0; right: 0; height: calc(100dvh - 72px); padding: 22px; display: grid; align-content: start; gap: 5px; overflow-y: auto; background: linear-gradient(155deg, #1f296b, #521b7e 58%, #101630); transform: translateX(105%); opacity: 0; transition: transform .3s, opacity .3s; }
+      }
+      @media (max-width: 650px) {
+        .container { width: min(calc(100% - 30px), var(--max)); }
+        .site-header { height: 66px; padding-inline: 17px; }
+        .header-actions { gap: 4px; }
+        .site-nav { top: 66px; height: calc(100dvh - 66px); }
+        .hero { min-height: 100svh; }
+        .hero-inner { padding: 94px 0 56px; }
+        .hero-portrait { width: 96px; height: 96px; }
+        .hero h1 { font-size: clamp(36px, 10.7vw, 50px); }
+        .hero-summary { font-size: 14px; }
+        .hero-actions { display: grid; }
+        .button { width: 100%; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition-duration: .01ms !important; }
+        .reveal { opacity: 1; transform: none; }
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="styles.css" /></noscript>
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mobileengineersarosh.vercel.app/#website","url":"https://mobileengineersarosh.vercel.app/","name":"Muhammad Sarosh — Mobile Engineer Portfolio","inLanguage":"en","publisher":{"@id":"https://mobileengineersarosh.vercel.app/#person"}},{"@type":"Person","@id":"https://mobileengineersarosh.vercel.app/#person","name":"Muhammad Sarosh","jobTitle":"Mobile Engineer","url":"https://mobileengineersarosh.vercel.app/","image":"https://mobileengineersarosh.vercel.app/assets/muhammad-sarosh.jpg","sameAs":["https://www.linkedin.com/in/sarosh-tahir","https://github.com/sarosh4271"],"knowsAbout":["Flutter","Dart","Bluetooth Low Energy","BLE/GATT","iOS","Android","Mobile product delivery","Connected-device applications"]}]}</script>
     <script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
@@ -34,13 +105,13 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Muhammad Sarosh, home"><img src="assets/optimized/muhammad-sarosh-avatar.webp" alt="" width="320" height="477" decoding="async" /><span>M.Sarosh</span></a>
+      <a class="brand" href="#home" aria-label="Muhammad Sarosh, home"><img src="assets/optimized/muhammad-sarosh-avatar-160.webp" srcset="assets/optimized/muhammad-sarosh-avatar-160.webp 160w, assets/optimized/muhammad-sarosh-avatar.webp 320w" sizes="36px" alt="" width="160" height="239" decoding="async" /><span>M.Sarosh</span></a>
       <div class="header-actions">
         <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
           <a href="#home">Home</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Capabilities</a><a href="#education">Education</a><a href="#contact">Contact</a>
           <a class="nav-download" href="assets/muhammad-sarosh-cv.pdf" download data-track="resume_download" data-track-label="cv_nav">Download CV</a>
         </nav>
-        <a class="header-linkedin" href="https://www.linkedin.com/in/sarosh-tahir" target="_blank" rel="noreferrer" aria-label="Visit Muhammad Sarosh on LinkedIn (opens in a new tab)" title="LinkedIn" data-track="contact_click" data-track-label="linkedin_header"><img src="assets/tools/linkedin.png" alt="" width="512" height="512" /></a>
+        <a class="header-linkedin" href="https://www.linkedin.com/in/sarosh-tahir" target="_blank" rel="noreferrer" aria-label="Visit Muhammad Sarosh on LinkedIn (opens in a new tab)" title="LinkedIn" data-track="contact_click" data-track-label="linkedin_header"><img src="assets/optimized/linkedin-64.webp" alt="" width="64" height="64" /></a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       </div>
     </header>
@@ -50,7 +121,7 @@
         <div class="stars" aria-hidden="true"></div>
         <div class="hero-inner">
           <div class="availability"><i></i> Islamabad, Pakistan (UTC+5) · Flexible overlap with global remote teams · Open to relocation</div>
-          <figure class="hero-portrait"><img src="assets/optimized/muhammad-sarosh-avatar.webp" alt="Muhammad Sarosh, Mobile Engineer" width="320" height="477" fetchpriority="high" decoding="async" /></figure>
+          <figure class="hero-portrait"><img src="assets/optimized/muhammad-sarosh-avatar-160.webp" srcset="assets/optimized/muhammad-sarosh-avatar-160.webp 160w, assets/optimized/muhammad-sarosh-avatar.webp 320w" sizes="(max-width: 650px) 82px, 94px" alt="Muhammad Sarosh, Mobile Engineer" width="160" height="239" fetchpriority="high" decoding="async" /></figure>
           <p class="hero-kicker">Muhammad Sarosh</p>
           <h1 id="hero-heading">Mobile Engineer building reliable Flutter products and <span>connected-device experiences</span></h1>
           <p class="hero-summary">5+ years delivering iOS and Android products across consumer apps, subscriptions, location platforms, BLE hardware, and native integrations. Five published apps and 10+ connected-device applications, from architecture and protocols through CI/CD and store release.</p>
@@ -78,15 +149,15 @@
             <div class="group-heading reveal"><div><p>Path 01</p><h3 id="product-heading">Product &amp; startup applications</h3></div><span>3 shipped products</span></div>
             <div class="project-grid">
               <article class="project-card reveal">
-                <div class="project-visual orange"><img class="project-screen" src="assets/optimized/outdey-card.webp" alt="Outdey event discovery screen" width="360" height="780" loading="lazy" decoding="async" /><img class="project-icon" src="assets/optimized/outdey-icon.webp" alt="Outdey icon" width="128" height="128" loading="lazy" decoding="async" /></div>
+                <div class="project-visual orange"><img class="project-screen" src="assets/optimized/outdey-card-200.webp" srcset="assets/optimized/outdey-card-200.webp 200w, assets/optimized/outdey-card.webp 360w" sizes="109px" alt="Outdey event discovery screen" width="200" height="434" loading="lazy" decoding="async" /><img class="project-icon" src="assets/optimized/outdey-icon.webp" alt="Outdey icon" width="128" height="128" loading="lazy" decoding="async" /></div>
                 <div class="project-body"><div class="project-meta"><span>Elite IT Team</span><time>2023–2024</time></div><h4>Outdey</h4><p class="project-problem">One mobile product needed to serve event discovery, social planning, ticket buyers, organizers, and QR admission.</p><dl class="project-proof"><div><dt>Role</dt><dd>Sole mobile developer owning Flutter delivery, production fixes, API extensions, store-review remediation, and release.</dd></div><div><dt>Engineering</dt><dd>Unified buyer and organizer state flows; integrated maps, payments, notifications, chat, and QR scanning.</dd></div><div><dt>Outcome</dt><dd>Delivered the complete multi-role event journey and shipped it on iOS and Android.</dd></div></dl><div class="project-links"><a href="case-studies/outdey/" data-track="case_study_click" data-track-label="outdey">Read case study →</a><a href="https://apps.apple.com/us/app/outdey/id6497566952" target="_blank" rel="noreferrer" data-track="store_click" data-track-label="outdey_app_store">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.outdey.outdey" target="_blank" rel="noreferrer" data-track="store_click" data-track-label="outdey_play_store">Google Play ↗</a></div></div>
               </article>
               <article class="project-card reveal">
-                <div class="project-visual violet"><img class="project-screen" src="assets/optimized/unix-card.webp" alt="UniX student platform home screen" width="360" height="783" loading="lazy" decoding="async" /><img class="project-icon unix" src="assets/optimized/unix-logo.webp" alt="UniX logo" width="128" height="128" loading="lazy" decoding="async" /></div>
+                <div class="project-visual violet"><img class="project-screen" src="assets/optimized/unix-card-200.webp" srcset="assets/optimized/unix-card-200.webp 200w, assets/optimized/unix-card.webp 360w" sizes="109px" alt="UniX student platform home screen" width="200" height="435" loading="lazy" decoding="async" /><img class="project-icon unix" src="assets/optimized/unix-logo-72.webp" srcset="assets/optimized/unix-logo-72.webp 72w, assets/optimized/unix-logo.webp 128w" sizes="39px" alt="UniX logo" width="72" height="72" loading="lazy" decoding="async" /></div>
                 <div class="project-body"><div class="project-meta"><span>Elite IT Team</span><time>2024–2025</time></div><h4>UniX — University X</h4><p class="project-problem">A stalled platform spanning 10+ student-life feature areas needed to become a stable, coherent experience ready for both stores.</p><dl class="project-proof"><div><dt>Role</dt><dd>Sole mobile developer owning stabilization, feature completion, store-review remediation, and release delivery.</dd></div><div><dt>Engineering</dt><dd>Reworked housing, community, messaging, maps, and notification journeys; aligned Firebase and API state.</dd></div><div><dt>Outcome</dt><dd>Turned a stalled multi-module product into production releases on iOS and Android.</dd></div></dl><div class="project-links"><a href="case-studies/unix/" data-track="case_study_click" data-track-label="unix">Read case study →</a><a href="https://apps.apple.com/us/app/unix-university-x/id6740775299" target="_blank" rel="noreferrer" data-track="store_click" data-track-label="unix_app_store">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.unix.com" target="_blank" rel="noreferrer" data-track="store_click" data-track-label="unix_play_store">Google Play ↗</a></div></div>
               </article>
               <article class="project-card reveal">
-                <div class="project-visual rose"><img class="project-screen" src="assets/optimized/glo-card.webp" alt="glo beauty discovery screen" width="360" height="480" loading="lazy" decoding="async" /><img class="project-icon" src="assets/optimized/glo-icon.webp" alt="glo icon" width="128" height="128" loading="lazy" decoding="async" /></div>
+                <div class="project-visual rose"><img class="project-screen" src="assets/optimized/glo-card-260.webp" srcset="assets/optimized/glo-card-260.webp 260w, assets/optimized/glo-card.webp 360w" sizes="145px" alt="glo beauty discovery screen" width="260" height="347" loading="lazy" decoding="async" /><img class="project-icon" src="assets/optimized/glo-icon.webp" alt="glo icon" width="128" height="128" loading="lazy" decoding="async" /></div>
                 <div class="project-body"><div class="project-meta"><span>Elite IT Team</span><time>2024</time></div><h4>glo</h4><p class="project-problem">Beauty discovery had to feel equally natural in English and Arabic while supporting location-led search and rich filters.</p><dl class="project-proof"><div><dt>Role</dt><dd>Independently delivered the mobile application across iOS and Android.</dd></div><div><dt>Engineering</dt><dd>Built bidirectional layouts and Arabic RTL behavior; combined maps, filters, ratings, reviews, and wishlists.</dd></div><div><dt>Outcome</dt><dd>Shipped a bilingual discovery experience across both mobile stores.</dd></div></dl><div class="project-links"><a href="https://apps.apple.com/us/app/glo/id6503257805" target="_blank" rel="noreferrer" data-track="store_click" data-track-label="glo_app_store">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.rwnq.rwnq_app" target="_blank" rel="noreferrer" data-track="store_click" data-track-label="glo_play_store">Google Play ↗</a></div></div>
               </article>
             </div>
@@ -157,6 +228,51 @@
       </div></section>
     </main>
     <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
-    <script defer src="/_vercel/insights/script.js"></script><script src="script.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      const menu = document.querySelector('.site-nav');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const closeMenu = () => {
+        menu?.classList.remove('open');
+        menuToggle?.classList.remove('active');
+        menuToggle?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      };
+      menuToggle?.addEventListener('click', () => {
+        const opening = menuToggle.getAttribute('aria-expanded') !== 'true';
+        menuToggle.setAttribute('aria-expanded', String(opening));
+        menuToggle.classList.toggle('active', opening);
+        menu?.classList.toggle('open', opening);
+        document.body.classList.toggle('menu-open', opening);
+      });
+      document.querySelectorAll('.site-nav a, .brand').forEach((link) => link.addEventListener('click', closeMenu));
+      if (reduceMotion) {
+        document.querySelectorAll('.reveal').forEach((item) => item.classList.add('visible'));
+      } else {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: .08 });
+        document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+      }
+      const year = document.querySelector('[data-year]');
+      if (year) year.textContent = new Date().getFullYear();
+      document.querySelectorAll('[data-track]').forEach((element) => {
+        element.addEventListener('click', () => {
+          const name = element.dataset.track;
+          const label = element.dataset.trackLabel;
+          if (!name || typeof window.va !== 'function') return;
+          window.va('event', { name, label });
+        });
+      });
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeMenu();
+      });
+    </script>
   </body>
 </html>
